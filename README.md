@@ -10,12 +10,13 @@ Alpine işletim sisteminin üstüne curl ve htop komutları kurulması için Doc
 Bulunduğu dizine build eder ve image oluşturur.
 **Docker build -t <imagename> .**<br/>
 ### İmage'i çalıştırma ve terminaline bağlanma
+  
 **Docker run -it <imagename> /bin/sh**<br/>
-Alpine'in içinde which curl ve which htop komutlarını çalıştırdığımızda /usr/bin klasörünün altında olduğunu görebiliriz ve execute edebiliriz.
+Alpine'in içinde which curl ve which htop komutlarını çalıştırdığımızda /usr/bin klasörünün altında olduğunu görülür ve execute edilebilir.
   
 ## Soru-2
   
- Wordpress ve mysql imagelerini çalıştırabileceğimiz bir docker-compose dosyası yazılır. Gerekli çevre değişkenleri atanır ve bağlantılar sağlanır. 80 portunun tuttuğu değer yeni  bir port numarasına atanır. Artık bu port numarası sayesinde wordpress sayfası görüntülenebilir.
+ Wordpress ve mysql imagelerini çalıştırabileceğimiz bir docker-compose dosyası yazılır. Gerekli çevre değişkenleri atanır ve bağlantılar sağlanır. 80 portunun tuttuğu değer yeni  bir port numarasına atanır. Artık bu port numarası sayesinde wordpress sayfası tarayıcıda görüntülenebilir.
  
  ## Soru-3
   
