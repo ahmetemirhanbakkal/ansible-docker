@@ -1,0 +1,25 @@
+# hosts all değerini alarak inventory dosyasının altındaki tüm ip adreslerine erişim sağlayabilir.
+# become sayesinde bu task root olarak execute edilecektir.
+
+
+- hosts: all
+  become: true
+
+# ubuntu için docker indirme işlemi gerçekleşecektir. İndirilecek yer focaldir.
+# son olarak gerekli bağımlılıklar indirilir.       
+
+  tasks:
+    - name: ensure repository key is installed
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: ensure docker registry is available
+      apt_repository: repo='deb https://download.docker.com/linux/ubuntu focal stable' state=present
+
+    - name: ensure docker and dependencies are installed
+      apt: name=docker-ce update_cache=yes
+
+# service ismi verilir ve sistem yeniden başlatıldığında servisin aktifliği ayarlanır.
+      
+    - service: name=docker state=restarted
