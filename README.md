@@ -8,10 +8,11 @@ Alpine işletim sisteminin üstüne curl ve htop komutları kurulması için Doc
 #### Dockerfile'ı Build Etme
 
 Bulunduğu dizine build eder ve image oluşturur.<br/>
-**Docker build -t <imagename> .**<br/>
-#### İmage Çalıştırma ve Terminaline Bağlanma İşlemleri
-  
-**Docker run -it <imagename> /bin/sh**<br/>
+**Docker build -t imagename .**<br/>
+#### İmage Çalıştırma
+
+Image çalıştırılır ve terminalinin içine girilir.
+**Docker run -it imagename /bin/sh**<br/>
 Alpine'in içinde which curl ve which htop komutlarını çalıştırdığımızda /usr/bin klasörünün altında olduğunu görülür ve execute edilebilir.
   
 ## Soru-2
