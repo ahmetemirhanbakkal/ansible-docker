@@ -1,5 +1,7 @@
 # ansible-docker
 
+Bu repository OBSS DevOps Internship programı için açılmıştır.
+
 
 ## Soru-1
 
